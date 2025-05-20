@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  tssc/gitops: wo920bzxe-go 
+  janus-idp.io/tekton: wo920bzxe-go
+  backstage.io/kubernetes-id: wo920bzxe-go
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: wo920bzxe-go
+resources:
+  - ci-tekton.yaml
+  - application-dev.yaml
+  - application-stage.yaml
+  - application-prod.yaml
